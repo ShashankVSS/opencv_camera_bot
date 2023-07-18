@@ -12,6 +12,8 @@ sensor_msgs
 std_msgs
 geometry_msgs
 ```
+Basic Gazebo robot and sim were made using a tutorial from [Articulated Robotics](https://www.youtube.com/playlist?list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT)
+
 
 ### Running Commands
 In 3 separate terminals:
