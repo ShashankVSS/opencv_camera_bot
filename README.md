@@ -1,7 +1,28 @@
-## Robot Package Template
+## OpenCV Optical Flow for Velocity Determination
 
-This is a GitHub template. You can make your own copy by clicking the green "Use this template" button.
+This Gazebo sim utilizes OpenCV and Gazebo along with ROS2 Foxy to simulate robot movement along with determining the average velocities of specific objects in the robots FOV.
 
-It is recommended that you keep the repo/package name the same, but if you do change it, ensure you do a "Find all" using your IDE (or the built-in GitHub IDE by hitting the `.` key) and rename all instances of `my_bot` to whatever your project's name is.
+### Requirements:
+```
+rclpy
+numpy
+cv2
+cv_bridge
+sensor_msgs
+std_msgs
+geometry_msgs
+```
 
-Note that each directory currently has at least one file in it to ensure that git tracks the files (and, consequently, that a fresh clone has direcctories present for CMake to find). These example files can be removed if required (and the directories can be removed if `CMakeLists.txt` is adjusted accordingly).
+### Running Commands
+In 3 separate terminals:
+```
+ros2 launch camera_bot launch_sim.launch.py world:=./src/camera_bot/worlds/obstacles.world
+ros2 run teleop_twist_keyboard teleop_twist_keyboard
+ros2 launch camera_bot opencv_pub.launch.py
+```
+
+To view published data: 
+```
+ros2 topic echo /x_velocity
+ros2 topic echo /y_velocity
+```
