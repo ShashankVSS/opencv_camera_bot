@@ -14,6 +14,10 @@ geometry_msgs
 ```
 Basic Gazebo robot and sim were made using a tutorial from [Articulated Robotics](https://www.youtube.com/playlist?list=PLunhqkrRNRhYAffV8JDiFOatQXuU-NnxT)
 
+### Demo
+
+https://github.com/AVL-TMU/opencv_camera_bot/assets/32677397/7b0c52a8-cf5f-4ba7-8836-36ee71148924
+
 
 ### Running Commands
 In 3 separate terminals:
